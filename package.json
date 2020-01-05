@@ -1,0 +1,30 @@
+{
+  "name": "ward-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool for Ward",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinEspinas/ward-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Colin Espinas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ColinEspinas/ward-cli/issues"
+  },
+  "homepage": "https://github.com/ColinEspinas/ward-cli#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "inquirer": "^7.0.2",
+    "ora": "^4.0.3",
+    "simple-git": "^1.129.0",
+    "ward-server": "^1.1.1"
+  }
+}
