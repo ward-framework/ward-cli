@@ -19,13 +19,29 @@ program
 		directory = (directory) ? path.resolve(directory) : path.resolve();
 		const spinner = ora('Cloning project skeleton from github').start();
 		try {
-			git(directory).clone('https://github.com/ColinEspinas/ward.git', path.resolve(name), ()=>{
-				spinner.succeed(`Project skeleton cloned successfully`);
-				console.log('Project successfully created in ' + chalk.blue.bold(path.resolve(name)));
+			git(directory).clone('https://github.com/ColinEspinas/ward.git', path.resolve(directory, name), (err)=>{
+				if (err) {
+					spinner.fail("Failed to clone the project skeleton");
+					console.error(chalk.red("Error : ") + err.message);
+				}
+				else {
+					spinner.succeed(`Project skeleton cloned successfully`);
+					rrSpinner = ora('Removing remote origin from new project').start();
+					git(path.resolve(directory, name)).removeRemote('origin', (err)=>{
+						if (err) {
+							spinner.fail("Failed to remove remote origin from new project");
+							console.error(chalk.red("Error : ") + err.message);
+						}
+						else {
+							rrSpinner.succeed('Remote origin removed from new project');
+							console.log('Project successfully created in ' + chalk.blue.bold(path.resolve(name)));
+						}
+					});
+				}
 			});
 		}
 		catch(err) {
-			spinner.fail("Failed to clone the project skeleton")
+			spinner.fail("Failed to create a new project");
 			console.error(chalk.red("Error : ") + err.message);
 		}
 	});
