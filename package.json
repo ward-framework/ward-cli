@@ -2,10 +2,7 @@
   "name": "ward-cli",
   "version": "1.0.0",
   "description": "A CLI tool for Ward",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "main": "./bin/ward.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ColinEspinas/ward-cli.git"
@@ -26,5 +23,8 @@
     "ora": "^4.0.3",
     "simple-git": "^1.129.0",
     "ward-server": "^1.1.1"
+  },
+  "bin": {
+    "ward": "./bin/ward.js"
   }
 }

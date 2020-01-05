@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 const program = require('commander');
-const pjson = require('./package.json');
+const pjson = require('../package.json');
 const WardServer = require('ward-server');
 const path = require('path');
 const git = require('simple-git');
@@ -7,7 +9,8 @@ const ora = require('ora');
 const chalk = require('chalk');
 
 program
-	.version(pjson.version);
+	.version(pjson.version)
+	.name("ward");
 
 program
 	.command('new <name> [directory]')
@@ -15,10 +18,16 @@ program
 	.action(function(name, directory) {
 		directory = (directory) ? path.resolve(directory) : path.resolve();
 		const spinner = ora('Cloning project skeleton from github').start();
-		git(directory).clone('https://github.com/ColinEspinas/ward.git', path.resolve(name), ()=>{
-			spinner.succeed(`Project skeleton cloned successfully`);
-			console.log('Project successfully created in ' + chalk.blue.bold(path.resolve(name)));
-		});
+		try {
+			git(directory).clone('https://github.com/ColinEspinas/ward.git', path.resolve(name), ()=>{
+				spinner.succeed(`Project skeleton cloned successfully`);
+				console.log('Project successfully created in ' + chalk.blue.bold(path.resolve(name)));
+			});
+		}
+		catch(err) {
+			spinner.fail("Failed to clone the project skeleton")
+			console.error(chalk.red("Error : ") + err.message);
+		}
 	});
 
 program
