@@ -128,7 +128,7 @@ This project is developed by a somewhat beginner javascript developer, help is a
 <!-- LICENSE -->
 ## License
 
-ward-server is distributed under the MIT License. See `LICENSE` for more information.
+ward-cli is distributed under the MIT License. See `LICENSE` for more information.
 
 
 
@@ -137,15 +137,16 @@ ward-server is distributed under the MIT License. See `LICENSE` for more informa
 
 Colin Espinas - [Website](https://colinespinas.com) - contact@colinespinas.com
 
-Project link: [https://github.com/ColinEspinas/ward-server](https://github.com/ColinEspinas/ward-server)
+Project link: [https://github.com/ColinEspinas/ward-cli](https://github.com/ColinEspinas/ward-cli)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [connect](https://github.com/senchalabs/connect)
-* [serve-static](https://github.com/expressjs/serve-static)
+* [commander.js](https://github.com/tj/commander.js/)
+* [simple-git](https://github.com/steveukx/git-js)
+* [ora](https://github.com/sindresorhus/ora)
 * [chalk](https://github.com/chalk/chalk)
 
 
@@ -153,16 +154,16 @@ Project link: [https://github.com/ColinEspinas/ward-server](https://github.com/C
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/colinespinas/ward-server.svg?style=flat-square
-[contributors-url]: https://github.com/colinespinas/ward-server/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/colinespinas/ward-server.svg?style=flat-square
-[forks-url]: https://github.com/colinespinas/ward-server/network/members
-[stars-shield]: https://img.shields.io/github/stars/colinespinas/ward-server.svg?style=flat-square
-[stars-url]: https://github.com/colinespinas/ward-server/stargazers
-[issues-shield]: https://img.shields.io/github/issues/colinespinas/ward-server.svg?style=flat-square
-[issues-url]: https://github.com/colinespinas/ward-server/issues
-[license-shield]: https://img.shields.io/github/license/colinespinas/ward-server.svg?style=flat-square
-[license-url]: https://github.com/colinespinas/ward-server/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/colinespinas/ward-cli.svg?style=flat-square
+[contributors-url]: https://github.com/colinespinas/ward-cli/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/colinespinas/ward-cli.svg?style=flat-square
+[forks-url]: https://github.com/colinespinas/ward-cli/network/members
+[stars-shield]: https://img.shields.io/github/stars/colinespinas/ward-cli.svg?style=flat-square
+[stars-url]: https://github.com/colinespinas/ward-cli/stargazers
+[issues-shield]: https://img.shields.io/github/issues/colinespinas/ward-cli.svg?style=flat-square
+[issues-url]: https://github.com/colinespinas/ward-cli/issues
+[license-shield]: https://img.shields.io/github/license/colinespinas/ward-cli.svg?style=flat-square
+[license-url]: https://github.com/colinespinas/ward-cli/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/colin-espinas-9739b8178/l
 [product-screenshot]: https://i.imgur.com/o9rDolc.jpg
