@@ -148,6 +148,7 @@ Project link: [https://github.com/ColinEspinas/ward-cli](https://github.com/Coli
 * [simple-git](https://github.com/steveukx/git-js)
 * [ora](https://github.com/sindresorhus/ora)
 * [chalk](https://github.com/chalk/chalk)
+* [ward-server](https://github.com/colinespinas/ward-server)
 
 
 
