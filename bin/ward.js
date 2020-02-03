@@ -19,7 +19,7 @@ program
 		directory = (directory) ? path.resolve(directory) : path.resolve();
 		const spinner = ora('Cloning project skeleton from github').start();
 		try {
-			git(directory).clone('https://github.com/ColinEspinas/ward.git', path.resolve(directory, name), (err)=>{
+			git(directory).clone('https://github.com/ward-framework/ward.git', path.resolve(directory, name), (err)=>{
 				if (err) {
 					spinner.fail("Failed to clone the project skeleton");
 					console.error(chalk.red("Error : ") + err.message);
