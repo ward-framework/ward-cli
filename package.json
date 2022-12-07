@@ -21,7 +21,7 @@
     "commander": "^4.0.1",
     "inquirer": "^7.0.2",
     "ora": "^4.0.3",
-    "simple-git": "^1.129.0",
+    "simple-git": "^3.15.0",
     "ward-server": "^1.1.1"
   },
   "bin": {
